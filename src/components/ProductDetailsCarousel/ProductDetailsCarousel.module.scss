@@ -66,11 +66,17 @@
     width: 50px;
     object-fit: contain;
     border: 1px solid $elements-color;
+    transition: border $effect-duration ease;
 
     @include on-desktop {
       width: 100%;
       height: auto;
       aspect-ratio: 1 / 1;
+    }
+
+    &:hover {
+      border-color: $primary-color;
+      cursor: pointer;
     }
 
     &--active {
